@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tv_history_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="History"
+        android:textColor="#3A3A3A"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/history_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lihat semua"
+        android:textColor="#3059C3"
+        android:textSize="10sp"/>
+</LinearLayout>

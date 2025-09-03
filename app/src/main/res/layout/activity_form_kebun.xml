@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="?android:colorBackground"
+	tools:context=".MainActivity">
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="0dp"
+		android:layout_height="0dp"
+		android:fillViewport="true"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:padding="@dimen/spacing_medium">
+
+			<!-- Judul -->
+			<TextView
+				android:id="@+id/tvTitle"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Form PKS"
+				android:gravity="center"
+				android:textSize="22sp"
+				android:textStyle="bold"
+				android:textColor="?attr/colorOnBackground"
+				android:layout_marginBottom="@dimen/spacing_large"/>
+
+			<!-- Tanggal Pengiriman -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Tanggal Pengiriman"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/etTanggalPengiriman"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:focusable="false"
+					android:clickable="true"
+					android:hint="Pilih tanggal"
+					android:inputType="none"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Nama Kebun -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nama Kebun"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				app:endIconMode="dropdown_menu">
+
+				<AutoCompleteTextView
+					android:id="@+id/spinnerKebun"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Pilih nama kebun"
+					android:inputType="none"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Afdeling -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Afdeling"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				app:endIconMode="dropdown_menu">
+
+				<AutoCompleteTextView
+					android:id="@+id/spinnerAfdeling"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Pilih afdeling"
+					android:inputType="none"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Nomor Blanko PB 25 -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nomor Blanko PB 25"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/etNomorBlanko"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="number"
+					android:hint="Contoh: 12345"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Nopol Mobil -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nopol Mobil"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/etNopol"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:hint="Contoh: B 1234 XYZ"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Nama Supir -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nama Supir"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
+			<com.google.android.material.textfield.TextInputLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/etSupir"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textPersonName"
+					android:hint="Contoh: Andi"
+					android:textColorHint="@android:color/darker_gray"/>
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<!-- Tombol Aksi -->
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:layout_marginTop="@dimen/spacing_large">
+
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/btnBatal"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="Batal"
+					style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+				<View
+					android:layout_width="@dimen/spacing_medium"
+					android:layout_height="0dp"/>
+
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/btnSelanjutnya"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:text="Selanjutnya"
+					style="@style/Widget.MaterialComponents.Button"/>
+			</LinearLayout>
+
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
