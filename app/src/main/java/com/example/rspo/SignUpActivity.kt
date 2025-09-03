@@ -36,7 +36,7 @@ class SignUpActivity : AppCompatActivity() {
             val confirmPassword = binding.inputConfirmPassword.text.toString().trim()
 
             if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                Toast.makeText(this, "Semua field harus diisi", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Semua field harus diisi ", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
