@@ -1,6 +1,6 @@
 package com.example.rspo
 
-data class RegisterRequest(
+data class SignUpRequest(
     val username: String,
     val email: String,
     val password: String,

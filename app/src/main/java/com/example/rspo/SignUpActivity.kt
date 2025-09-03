@@ -21,13 +21,8 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Retrofit
-        val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2/rspo_app/") // Emulator Android
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        api = retrofit.create(ApiService::class.java)
+        // API Ke Database
+        api = ApiClient.instance.create(ApiService::class.java)
 
         binding.btnSignUp.setOnClickListener {
             val username = binding.inputName.text.toString().trim()

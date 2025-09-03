@@ -21,13 +21,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Retrofit untuk API ke url (pakai JSON)
-        val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2/rspo_app/") // pakai IP Local, jadi hanya bisa di Emulator Android
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        api = retrofit.create(ApiService::class.java)
+        // API Ke Database
+        api = ApiClient.instance.create(ApiService::class.java)
 
         binding.btnLogin.setOnClickListener {
             val login = binding.inputEmail.text.toString().trim()
