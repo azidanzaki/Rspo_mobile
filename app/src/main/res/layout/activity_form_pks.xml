@@ -5,8 +5,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:background="#FFFFFF"
-	tools:context=".PksActivity">
+	android:background="?android:colorBackground"
+	tools:context=".MainActivity">
 
 	<androidx.core.widget.NestedScrollView
 		android:layout_width="0dp"
@@ -21,20 +21,29 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:orientation="vertical"
-			android:padding="16dp">
+			android:padding="@dimen/spacing_medium">
 
 			<!-- Judul -->
 			<TextView
+				android:id="@+id/tvTitle"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:text="Form PKS"
 				android:gravity="center"
 				android:textSize="22sp"
 				android:textStyle="bold"
-				android:textColor="@android:color/black"
-				android:layout_marginBottom="24dp"/>
+				android:textColor="?attr/colorOnBackground"
+				android:layout_marginBottom="@dimen/spacing_large"/>
 
 			<!-- Tanggal Masuk -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Tanggal Pengiriman"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -46,79 +55,129 @@
 					android:layout_height="wrap_content"
 					android:focusable="false"
 					android:clickable="true"
-					android:hint="Pilih tanggal"/>
+					android:hint="Pilih tanggal"
+					android:inputType="none"
+					android:textColorHint="@android:color/darker_gray"/>
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Nama PKS -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nama PKS"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-				app:endIconMode="dropdown_menu"
-				android:layout_marginTop="16dp">
+				app:endIconMode="dropdown_menu"	>
 
 				<AutoCompleteTextView
 					android:id="@+id/spinnerPks"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:hint="Pilih nama PKS"/>
+					android:hint="Pilih nama PKS"
+					android:inputType="none"
+					android:paddingLeft="15dp"
+					android:textColorHint="@android:color/darker_gray"/>
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Tujuan Pengiriman -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Tujuan Pengiriman"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-				android:layout_marginTop="16dp">
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 				<com.google.android.material.textfield.TextInputEditText
 					android:id="@+id/etTujuan"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:hint="Tujuan Pengiriman"/>
+					android:hint="Contoh: Jakarta"
+					android:textColorHint="@android:color/darker_gray" />
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Nomor Blanko -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nomor Blanko PB 33"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-				android:layout_marginTop="16dp">
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 				<com.google.android.material.textfield.TextInputEditText
 					android:id="@+id/etNomorBlanko"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:inputType="number"
-					android:hint="Nomor Blanko PB 33"/>
+					android:hint="Contoh: 12345"
+					android:textColorHint="@android:color/darker_gray"/>
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Nopol Mobil -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nopol Mobil"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-				android:layout_marginTop="16dp">
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 				<com.google.android.material.textfield.TextInputEditText
 					android:id="@+id/etNopol"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:hint="Nopol Mobil"/>
+					android:hint="Contoh: B 1234 XYZ"
+					android:textColorHint="@android:color/darker_gray"/>
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Nama Supir -->
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Nama Supir"
+				android:textStyle="bold"
+				android:textSize="16sp"
+				android:layout_marginBottom="4dp"/>
+
 			<com.google.android.material.textfield.TextInputLayout
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-				android:layout_marginTop="16dp">
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 				<com.google.android.material.textfield.TextInputEditText
 					android:id="@+id/etSupir"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:hint="Nama Supir"/>
+					android:inputType="textPersonName"
+					android:hint="Contoh: Andi"
+					android:textColorHint="@android:color/darker_gray"/>
 			</com.google.android.material.textfield.TextInputLayout>
 
 			<!-- Tombol Aksi -->
@@ -127,7 +186,7 @@
 				android:layout_height="wrap_content"
 				android:orientation="horizontal"
 				android:gravity="center"
-				android:layout_marginTop="24dp">
+				android:layout_marginTop="@dimen/spacing_large">
 
 				<com.google.android.material.button.MaterialButton
 					android:id="@+id/btnBatal"
@@ -138,7 +197,7 @@
 					style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
 
 				<View
-					android:layout_width="16dp"
+					android:layout_width="@dimen/spacing_medium"
 					android:layout_height="0dp"/>
 
 				<com.google.android.material.button.MaterialButton

@@ -1,117 +1,117 @@
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="vertical"
+	android:fillViewport="true"
 	android:background="#FFFFFF">
 
-	<ScrollView
+	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:fillViewport="true"
-		android:background="#343434">
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp">
 
+		<!-- Judul -->
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Form Kebun"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			android:textColor="#3A3A3A"
+			android:layout_marginBottom="24dp" />
+
+		<!-- Upload Foto -->
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Upload Foto Mobil"
+			android:textSize="24sp"
+			android:textStyle="bold"
+			android:textColor="#212121"
+			android:layout_marginBottom="8dp" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Upload 3 foto mobil sebelum dan sesudah berisi CPO"
+			android:textSize="16sp"
+			android:textColor="#212121"
+			android:layout_marginBottom="16dp" />
+
+		<!-- Container Gambar -->
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="vertical"
-			android:padding="16dp">
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:weightSum="3"
+			android:layout_marginBottom="24dp">
 
-			<!-- Judul -->
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Form PKS"
-				android:textSize="20sp"
-				android:textStyle="bold"
-				android:textColor="#3A3A3A"
-				android:layout_marginBottom="24dp"/>
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/foto1"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:layout_marginEnd="8dp"
+				android:src="@mipmap/ic_launcher"
+				android:scaleType="centerCrop"
+				android:clickable="true"
+				android:foreground="?attr/selectableItemBackground"
+				app:shapeAppearanceOverlay="@style/cr15" />
 
-			<!-- Upload Foto -->
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Upload Foto Mobil"
-				android:textSize="24sp"
-				android:textStyle="bold"
-				android:textColor="#212121"
-				android:layout_marginBottom="8dp"/>
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/foto2"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:layout_marginEnd="8dp"
+				android:src="@mipmap/ic_launcher"
+				android:scaleType="centerCrop"
+				android:clickable="true"
+				android:foreground="?attr/selectableItemBackground"
+				app:shapeAppearanceOverlay="@style/cr15" />
 
-			<TextView
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:text="Upload 3 foto mobil sebelum dan sesudah berisi CPO"
-				android:textSize="16sp"
-				android:textColor="#212121"
-				android:layout_marginBottom="16dp"/>
-
-			<!-- Container Gambar -->
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:gravity="center"
-				android:weightSum="3"
-				android:layout_marginBottom="24dp">
-
-				<com.google.android.material.imageview.ShapeableImageView
-					android:layout_width="0dp"
-					android:layout_height="100dp"
-					android:layout_weight="1"
-					android:layout_marginEnd="8dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="centerCrop"
-					app:shapeAppearanceOverlay="@style/cr15"/>
-
-				<com.google.android.material.imageview.ShapeableImageView
-					android:layout_width="0dp"
-					android:layout_height="100dp"
-					android:layout_weight="1"
-					android:layout_marginEnd="8dp"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="centerCrop"
-					app:shapeAppearanceOverlay="@style/cr15"/>
-
-				<com.google.android.material.imageview.ShapeableImageView
-					android:layout_width="0dp"
-					android:layout_height="100dp"
-					android:layout_weight="1"
-					android:src="@mipmap/ic_launcher"
-					android:scaleType="centerCrop"
-					app:shapeAppearanceOverlay="@style/cr15"/>
-			</LinearLayout>
-
-			<!-- Tombol Navigasi -->
-			<LinearLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:orientation="horizontal"
-				android:weightSum="2">
-
-				<TextView
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:layout_weight="1"
-					android:gravity="center"
-					android:padding="12dp"
-					android:background="@drawable/cr25beaeaea"
-					android:text="Kembali"
-					android:textColor="#86894D"
-					android:textStyle="bold"/>
-
-				<TextView
-					android:layout_width="0dp"
-					android:layout_height="wrap_content"
-					android:layout_weight="1"
-					android:gravity="center"
-					android:padding="12dp"
-					android:background="@drawable/cr25beaeaea"
-					android:text="Selanjutnya"
-					android:textColor="#147EA8"
-					android:textStyle="bold"/>
-			</LinearLayout>
-
+			<com.google.android.material.imageview.ShapeableImageView
+				android:id="@+id/foto3"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:src="@mipmap/ic_launcher"
+				android:scaleType="centerCrop"
+				android:clickable="true"
+				android:foreground="?attr/selectableItemBackground"
+				app:shapeAppearanceOverlay="@style/cr15" />
 		</LinearLayout>
-	</ScrollView>
-</LinearLayout>
+
+		<!-- Tombol Navigasi -->
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:weightSum="2">
+
+			<Button
+				android:id="@+id/btnKembali"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginEnd="8dp"
+				android:text="Kembali"
+				android:textColor="#86894D"
+				style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+			<Button
+				android:id="@+id/btnSelanjutnya"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="Selanjutnya"
+				android:textColor="#FFFFFF"
+				android:backgroundTint="#147EA8"
+				style="@style/Widget.MaterialComponents.Button" />
+		</LinearLayout>
+
+	</LinearLayout>
+</ScrollView>

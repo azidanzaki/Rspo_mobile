@@ -20,6 +20,7 @@
         <activity android:name=".Dashboard" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".PksFotoActivity" />
+        <activity android:name=".KebunFotoActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

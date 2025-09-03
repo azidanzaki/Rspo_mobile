@@ -19,6 +19,12 @@ interface ApiService {
     @GET("get_pks.php")
     fun getPks(): Call<PksResponse>
 
+    @GET("get_kebun.php")
+    fun getKebun(): Call<KebunResponse>
+
+    @GET("get_afdeling.php")
+    fun getAfdeling(): Call<AfdelingResponse>
+
     @Multipart
     @POST("insert_pks.php")
     fun insertPks(
@@ -32,5 +38,21 @@ interface ApiService {
         @Part foto2: MultipartBody.Part?,
         @Part foto3: MultipartBody.Part?
     ): Call<PksInputResponse>
+
+    @Multipart
+    @POST("insert_kebun.php")
+    fun insertKebun(
+        @Part("tanggal") tanggal: RequestBody,
+        @Part("nama_kebun") namaKebun: RequestBody,
+        @Part("afdeling") afdeling: RequestBody,
+        @Part("blanko") blanko: RequestBody,
+        @Part("nopol") nopol: RequestBody,
+        @Part("supir") supir: RequestBody,
+        @Part foto1: MultipartBody.Part?,
+        @Part foto2: MultipartBody.Part?,
+        @Part foto3: MultipartBody.Part?
+    ): Call<KebunInputResponse>
+
+
 }
 
